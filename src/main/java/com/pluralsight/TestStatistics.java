@@ -15,15 +15,27 @@ public class TestStatistics {
         int lowScore = scores[0];
         int median = scores[0];
 
-        for (int i = 0; i < scores.length; i++) {
-            average = average + scores[i];
+//        for (int i = 0; i < scores.length; i++) {
+//            average = average + scores[i];
+//
+//            if (highScore < scores[i]) {
+//                highScore = scores[i];
+//            }
+//
+//            if (lowScore > scores[i]) {
+//                lowScore = scores[i];
+//            }
+//        }
 
-            if (highScore < scores[i]) {
-                highScore = scores[i];
+        for (int score : scores) {
+            average = average + score;
+
+            if (highScore < score) {
+                highScore = score;
             }
 
-            if (lowScore > scores[i]) {
-                lowScore = scores[i];
+            if (lowScore > score) {
+                lowScore = score;
             }
         }
 
