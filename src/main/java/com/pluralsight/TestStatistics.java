@@ -15,7 +15,7 @@ public class TestStatistics {
         int average = scores[0];
         int highScore;
         int lowScore;
-        int median;
+        double median;
 
 //        for (int i = 0; i < scores.length; i++) {
 //            average = average + scores[i];
@@ -30,12 +30,9 @@ public class TestStatistics {
 //        }
         Arrays.sort(scores);
 
-        highScore = scores[-1];
+        highScore = scores[scores.length - 1];
         lowScore = scores[0];
-
-        if (scores.length % 2 != 0) {
-            System.out.println("Median: " + );
-        }
+        median = (scores[(scores.length / 2)] + scores[(scores.length / 2) - 1]) / 2.0;
 
         for (int score : scores) {
             average = average + score;
@@ -54,6 +51,7 @@ public class TestStatistics {
         System.out.println("Average: " + average);
         System.out.println("High Score: " + highScore);
         System.out.println("Low Score: " + lowScore);
+        System.out.println("Median: " + median);
 
     }
 }
